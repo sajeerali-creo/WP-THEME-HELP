@@ -1,0 +1,1207 @@
+@charset "UTF-8";
+
+/*
+Theme Name: Twenty Twenty-One
+Theme URI: https://wordpress.org/themes/twentytwentyone/
+Author: the WordPress team
+Author URI: https://wordpress.org/
+Description: Twenty Twenty-One is a blank canvas for your ideas and it makes the block editor your best brush. With new block patterns, which allow you to create a beautiful layout in a matter of seconds, this theme’s soft colors and eye-catching — yet timeless — design will let your work shine. Take it for a spin! See how Twenty Twenty-One elevates your portfolio, business website, or personal blog.
+Requires at least: 5.3
+Tested up to: 6.6
+Requires PHP: 5.6
+Version: 2.3
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: twentytwentyone
+Tags: one-column, accessibility-ready, custom-colors, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, block-patterns, rtl-language-support, sticky-post, threaded-comments, translation-ready, blog, portfolio
+
+Twenty Twenty-One WordPress Theme, (C) 2020 WordPress.org
+Twenty Twenty-One is distributed under the terms of the GNU GPL.
+*/
+
+/**
+ * SETTINGS
+ * File-header..........The file header for the themes style.css file.
+ * Fonts................Any font files, if the project needs specific fonts.
+ * Global...............Project-specific, globally available variables.
+ *
+ * TOOLS
+ * Functions............Global functions.
+ * Mixins...............Global mixins.
+ *
+ * GENERIC
+ * Normalize.css........Normalise browser defaults.
+ * Breakpoints..........Mixins and variables for responsive styles
+ * Vertical-margins.....Vertical spacing for the main components.
+ * Reset................Reset specific elements to make them easier to style in other contexts.
+ * Clearings............Clearings for the main components.
+ *
+ * ELEMENTS
+ * Blockquote...........Default blockquote.
+ * Forms................Element-level form styling.
+ * Headings.............H1–H6
+ * Links................Default links.
+ * Lists................Default lists.
+ * Media................Images, Figure, Figcaption, Embed, iFrame, Objects, Video.
+ *
+ * BLOCKS
+ * Audio................Specific styles for the audio block.
+ * Button...............Specific styles for the button block.
+ * Code.................Specific styles for the code block.
+ * Columns..............Specific styles for the columns block.
+ * Cover................Specific styles for the cover block.
+ * File.................Specific styles for the file block.
+ * Gallery..............Specific styles for the gallery block.
+ * Group................Specific styles for the group block.
+ * Heading..............Specific styles for the heading block.
+ * Image................Specific styles for the image block.
+ * Latest comments......Specific styles for the latest comments block.
+ * Latest posts.........Specific styles for the latest posts block.
+ * Legacy...............Specific styles for the legacy gallery.
+ * List.................Specific styles for the list block.
+ * Media text...........Specific styles for the media and text block.
+ * Navigation...........Specific styles for the navigation block.
+ * Paragraph............Specific styles for the paragraph block.
+ * Pullquote............Specific styles for the pullquote block.
+ * Quote................Specific styles for the quote block.
+ * Search...............Specific styles for the search block.
+ * Separator............Specific styles for the separator block.
+ * Table................Specific styles for the table block.
+ * Verse................Specific styles for the verse block.
+ * Video................Specific styles for the video block.
+ * Utilities............Block alignments.
+ *
+ * COMPONENTS
+ * Header...............Header styles.
+ * Footer...............Footer styles.
+ * Comments.............Comment styles.
+ * Archives.............Archive styles.
+ * 404..................404 styles.
+ * Search...............Search styles.
+ * Navigation...........Navigation styles.
+ * Footer Navigation....Footer Navigation styles.
+ * Pagination...........Pagination styles.
+ * Single...............Single page and post styles.
+ * Posts and pages......Misc, sticky post styles.
+ * Entry................Entry, author biography.
+ * Widget...............Widget styles.
+ * Editor...............Editor styles.
+ *
+ * UTILITIES
+ * A11y.................Screen reader text, prefers reduced motion etc.
+ * Color Palette........Classes for the color palette colors.
+ * Editor Font Sizes....Editor Font Sizes.
+ * Measure..............The width of a line of text, in characters.
+ */
+
+/* Categories 01 to 03 are the basics. */
+
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: var(--white);
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+a,
+div {
+  line-height: 1.5em;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--primary);
+}
+
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.btn-primary {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 24px;
+  transition: all 0.3s ease-out;
+  height: 60px;
+  background: linear-gradient(90deg, #47B298 12%, rgba(68, 75, 144, 0.92) 100%);
+  border-radius: 60px;
+  color: var(--white);
+  gap: 8px;
+  height: 52px;
+  border: none !important;
+}
+
+@media (min-width: 992px) {
+  .btn-primary {
+    padding: 18px 37px;
+    height: auto;
+  }
+}
+
+.btn-primary:hover {
+  background: linear-gradient(90deg, #3a9e85 12%, rgba(49, 56, 116, 0.92) 100%);
+  color: var(--white);
+}
+
+.btn-close {
+  width: 40px;
+  height: 40px;
+  background-color: var(--black);
+  color: var(--white);
+  font-size: 32px;
+  opacity: 1;
+  background-image: none;
+}
+
+.contact-btn {
+  height: 43px;
+  padding: 9px 26px 10px;
+  align-items: center;
+  justify-content: center;
+  /* consultiq.webflow.io/Nero 20% */
+  background: rgba(255, 255, 255, 0.2);
+  /* consultiq.webflow.io/Nero */
+  border: 1px solid var(--white);
+  border-radius: 60px;
+  color: var(--white);
+  transition: all 0.3s ease-out;
+}
+
+.contact-btn:hover {
+  background-color: #3E5064;
+  color: var(--white);
+}
+
+.icon-watsap {
+  background-color: #247A37;
+  height: 44px;
+  width: 44px;
+  border-radius: 8px;
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-watsap:hover {
+  background-color: #2e8741;
+  color: var(--white);
+}
+
+.menu-d li a {
+  font-size: 14px;
+  color: var(--white);
+}
+
+.menu-mob i {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid var(--white);
+  color: var(--white);
+  transition: all 0.3s ease-out;
+}
+
+.menu-mobile {
+  background: #283747;
+  position: fixed;
+  z-index: 13;
+  width: 100%;
+}
+
+@media (min-width: 992px) {
+  .menu-mobile {
+    background: none;
+    position: static;
+  }
+}
+
+.header {
+  transition: all 0.5s ease;
+}
+
+.top-fixed {
+  position: fixed;
+  background-color: var(--black);
+  z-index: 13;
+  padding: 20px 0px !important;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+
+.top-fixed .logo {
+  height: 30px;
+}
+
+.offcanvas {
+  background-color: var(--black);
+  color: var(--white);
+  padding: 40px;
+  max-width: 310px;
+}
+
+.offcanvas ul li a {
+  color: var(--white);
+  font-size: 20px;
+  padding: 24px 0px;
+  display: flex;
+  font-weight: 100;
+}
+
+.desk-header {
+  position: absolute;
+  top: 0px;
+  padding: 24px;
+  background: #3E5064;
+}
+
+.desk-header .barnd img {
+  height: 44px;
+}
+
+.desk-header .main-menu {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.desk-header .main-menu li a {
+  color: var(--white);
+  padding: 0px 16px;
+  font-weight: normal;
+  font-size: 18px;
+}
+
+.desk-header .main-menu li a:hover {
+  opacity: 0.5;
+}
+
+.mob-header {
+  background-color: #3E5064;
+  position: fixed;
+  width: 100%;
+  z-index: 9;
+}
+
+.mob-header .barnd img {
+  height: 36px;
+}
+
+footer {
+  background-color: var(--white);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer ul {
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+footer ul li a {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 20px;
+  color: #141416;
+}
+
+.padding-top {
+  padding-top: 24px;
+}
+
+.padding-bottom {
+  padding-bottom: 24px;
+}
+
+.container-xl {
+  padding: 0px 24px;
+}
+
+@media (min-width: 992px) {
+  .padding-top {
+    padding-top: 80px;
+  }
+
+  .padding-bottom {
+    padding-bottom: 80px;
+  }
+}
+@media (min-width: 1200px) {
+  .padding-top {
+    padding-top: 120px;
+  }
+
+  .padding-bottom {
+    padding-bottom: 120px;
+  }
+}
+
+.container-xxl {
+  padding: 0px 24px;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+a,
+p {
+  line-height: 1.5em !important;
+}
+
+.h1 {
+  font-size: 34px;
+  font-weight: 600;
+  color: var(--white);
+}
+
+.h2 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+}
+
+.h3 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 25px;
+}
+
+@media (min-width: 992px) {
+  .h1 {
+    font-size: 46px;
+    font-weight: 600;
+  }
+
+  .h2 {
+    font-size: 40px;
+  }
+}
+
+.h5 {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.h5 br {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .h5 {
+    font-size: 18px;
+    font-weight: 400;
+  }
+
+  .h5 br {
+    display: inline-block;
+  }
+}
+
+.font-weight-600 {
+  font-weight: 600;
+}
+
+.paragraph {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: normal;
+  color: #72777D;
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+:root {
+  --white: #fff;
+  --primary: #47B298;
+  --black: #2A2C40;
+  --text: #fff;
+  --shade-1: #EDF7F5;
+  --shade-2: #D3EDE6;
+  --shade-3: #B0DED3;
+  --shade-4: #8BCEBE;
+  --shade-5: #68C0AB;
+  --shade-6: #47B298;
+  --shade-7: #3C9781;
+  --shade-8: #327E6C;
+  --shade-9: #286557;
+  --shade-10: #205044;
+  --title: #2A2C40;
+  --paragraph: #666;
+}
+
+.text-white {
+  color: var(--white);
+}
+
+.text-title {
+  color: var(--title);
+}
+
+.text-paragraph {
+  color: var(--paragraph);
+}
+
+.text-barnd {
+  color: var(--primary) !important;
+}
+
+.bg-primary {
+  background-color: var(--primary) !important;
+}
+
+.bg-gradient2 {
+  background: rgb(220, 238, 242);
+  background: linear-gradient(0deg, rgba(220, 238, 242, 0) 0%, rgb(220, 238, 242) 100%);
+}
+
+.text-gradient {
+  background: -webkit-linear-gradient(180deg, #50C0FF, #875FFF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-green {
+  background-color: #fff;
+  border: 1px solid #d1d1d1;
+  color: #12B019;
+}
+
+.bg-green:hover {
+  border: 1px solid #000;
+}
+
+.bg-white {
+  background-color: var(--black) !important;
+}
+
+.bg-black {
+  background-color: var(--black) !important;
+}
+
+.shade-1 {
+  background-color: var(--shade-1);
+}
+
+.shade-2 {
+  background-color: var(--shade-2);
+}
+
+.shade-3 {
+  background-color: var(--shade-3);
+}
+
+.shade-4 {
+  background-color: var(--shade-4);
+}
+
+.shade-5 {
+  background-color: var(--shade-5);
+}
+
+.shade-6 {
+  background-color: var(--shade-6);
+}
+
+.shade-7 {
+  background-color: var(--shade-7);
+}
+
+.shade-8 {
+  background-color: var(--shade-8);
+}
+
+.shade-9 {
+  background-color: var(--shade-9);
+}
+
+.shade-10 {
+  background-color: var(--shade-10);
+}
+
+.main-banner {
+  background: rgba(62, 80, 100, 0.85);
+  width: 100%;
+  height: auto;
+  background-image: url(https://www.socialkapita.com/wp-content/uploads/banner-2-scaled.jpg);
+  background-size: cover;
+  padding: 100px 0px;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-repeat: no-repeat;
+}
+
+/* Section */
+
+@media (min-width: 992px) {
+  .main-banner {
+    justify-content: start;
+    text-align: left;
+  }
+}
+@media (min-width: 1200px) {
+  .main-banner {
+    height: 927px;
+  }
+}
+
+.main-banner .strip-head {
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 8px 40px;
+  gap: 10px;
+  height: auto;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 60px;
+  color: var(--white);
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 12px;
+}
+
+@media (min-width: 992px) {
+  .main-banner .strip-head {
+    font-size: 14px;
+    height: 44px;
+  }
+}
+
+.main-banner h1 {
+  font-weight: 600;
+  font-size: 30px;
+  letter-spacing: -2.5px;
+  color: var(--white);
+}
+
+@media (min-width: 992px) {
+  .main-banner h1 {
+    font-size: 40px;
+  }
+}
+@media (min-width: 1200px) {
+  .main-banner h1 {
+    font-size: 60px;
+  }
+}
+
+.main-banner p {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 25px;
+  color: var(--white);
+}
+
+.stripe-banner {
+  padding: 16px 24px;
+  height: 60px;
+  background: linear-gradient(90deg, #47B298 12%, rgba(68, 75, 144, 0.92) 100%);
+  color: var(--white);
+}
+
+@media (min-width: 992px) {
+  .stripe-banner {
+    height: 99px;
+    padding: 20px 24px;
+  }
+}
+
+.scroll-h {
+  overflow-x: auto;
+  white-space: nowrap;
+  overflow-y: hidden;
+}
+
+.abt-one {
+  width: 100%;
+  height: 400px;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: var(--shade-1);
+  margin-bottom: 24px;
+}
+
+@media (min-width: 992px) {
+  .abt-one {
+    width: 520px;
+    height: 560px;
+    margin-bottom: 0px;
+  }
+}
+
+.abt-one img {
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  height: 560px;
+}
+
+.abt-two {
+  width: 100%;
+  height: 400px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+@media (min-width: 992px) {
+  .abt-two {
+    position: absolute;
+    width: 360px;
+    height: 420px;
+    z-index: 1;
+    top: 234px;
+    right: -70px;
+    margin-bottom: 0px;
+  }
+}
+
+.abt-two img {
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  height: 420px;
+}
+
+.abt-strp {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 21.5px 10px 21.48px;
+  gap: 13px;
+  height: 38px;
+  background: #d3ede6;
+  border-radius: 50px;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-transform: uppercase;
+  color: #47b298;
+}
+
+.circle-icon {
+  width: 58px;
+  height: 58px;
+  border-radius: 160px;
+  background-color: #3e5064;
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg-hero {
+  background-color: #334154;
+}
+
+.box-gray {
+  /* Rectangle 6 */
+  width: 100%;
+  height: auto;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid #545667;
+  border-radius: 20px;
+}
+
+@media (min-width: 992px) {
+  .box-gray {
+    height: 516px;
+  }
+}
+@media (min-width: 1200px) {
+  .box-gray {
+    height: 416px;
+  }
+}
+
+.box-gray-2 {
+  /* Rectangle 6 */
+  width: 100%;
+  height: auto;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid #545667;
+  border-radius: 20px;
+}
+
+@media (min-width: 992px) {
+  .box-gray-2 {
+    height: 516px;
+  }
+}
+@media (min-width: 1200px) {
+  .box-gray-2 {
+    height: 416px;
+  }
+}
+
+.white-dec {
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  background: linear-gradient(180deg, #f6f7fb 0%, #ffffff 100%);
+  border-radius: 20px;
+  padding: 24px;
+}
+
+.white-dec ul li {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  color: #72777d;
+  list-style: none;
+  background-image: url(https://www.socialkapita.com/wp-content/uploads/dot.webp);
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: 8px;
+  padding-left: 16px;
+  margin-bottom: 16px;
+}
+
+.devider {
+  width: 100%;
+  height: 0px;
+  opacity: 0.1 !important;
+  border: 3px solid #3e5064;
+}
+
+.bg-main-hero {
+  background-image: url(https://www.socialkapita.com/wp-content/uploads/section-scaled.webp);
+  text-align: center;
+  background-color: #2a2c40;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 992px) {
+  .bg-main-hero {
+    background-attachment: fixed;
+    background-position: center;
+  }
+}
+
+.bg-main-hero h5 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  color: var(--white);
+}
+
+.logo-box {
+  width: 180px !important;
+  height: 100px !important;
+  ;
+  background: #fefefe;
+  border: 1px solid #e1e1e1;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin: 0px 16px;
+}
+
+.logo-box img {
+  width: 100%;
+  height: 100px;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+
+.bg-contact {
+  width: 100%;
+  background-image: url(https://www.socialkapita.com/wp-content/uploads/bg-contact-scaled.webp);
+}
+
+.box-value {
+  width: 100%;
+  height: auto;
+  padding: 8px 16px;
+  border: 1px solid var(--primary);
+  border-radius: 35px;
+  text-align: center;
+  color: var(--primary);
+}
+
+.wpcf7-not-valid-tip {
+  color: red !important;
+  font-size: 12px !important;
+}
+
+.wpcf7-response-output {
+  color: red !important;
+  font-size: 12px !important;
+}
+
+.screen-reader-response {
+  display: none !important;
+}
+
+@media (min-width: 992px) {
+  .w-lg-auto {
+    width: auto !important;
+  }
+}
+
+.fix-tp {
+  position: fixed;
+  background: #3E5064;
+  top: 0px;
+  z-index: 9;
+}
+
+.team-box {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.team-box img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  max-width: 100%!important;
+}
+
+.bg-gray {
+  background-color: #F6F7FB;
+}
+
+.sector-box {
+  background-color: #fff;
+  border-radius: 10px;
+  height: auto;
+}
+
+@media (min-width: 992px) {
+  .sector-box {
+    height: 230px;
+  }
+}
+
+
+.blue {
+  background-color: #11255c;
+}
+
+.yellow {
+  background-color: #cddd2a;
+}
+
+.brown {
+  background-color: #b8c0ab;
+}
+
+.black {
+  background-color: #000;
+}
+
+
+.logo-slider {
+  padding: 20px;
+  overflow: hidden;
+  max-width: 1320px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+}
+
+.logo-slider:hover div {
+  animation-play-state: paused;
+}
+
+.logo-slider div {
+  display: flex;
+  position: relative;
+  animation: marquee 20s linear infinite;
+  justify-content: space-around;
+}
+
+.logo-slider div div {
+  display: block;
+  min-width: var(--image-size);
+  height: var(--image-size);
+  margin: 0 1vw;
+  border-radius: 10px;
+}
+
+.logo-slider:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@-webkit-keyframes slide {
+  0% {
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+
+  100% {
+    -webkit-transform: translate(100%, 0);
+    -ms-transform: translate(100%, 0);
+    transform: translate(100%, 0);
+  }
+}
+
+/*!sc*/
+@keyframes slide {
+  0% {
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+
+  100% {
+    -webkit-transform: translate(100%, 0);
+    -ms-transform: translate(100%, 0);
+    transform: translate(100%, 0);
+  }
+}
+
+/*!sc*/
+
+.marquee-cont {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-flow: row nowrap;
+  -webkit-box-pack: center;
+  justify-content: center;
+  font-family: 'Archivo', sans-serif;
+}
+
+.marquee-slider {
+  min-width: 100%;
+  flex-shrink: 0;
+  animation-name: slide;
+  animation-direction: reverse;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  animation-duration: 25s;
+}
+
+.marquee-slider p {
+  display: inline-block;
+  position: relative;
+  font-size: 50px;
+  margin: 0;
+  padding: 20px 40px;
+  color: #65b099 !important;
+  text-transform: uppercase;
+}
+
+.marquee-slider p::before {
+  content: ".";
+  position: absolute;
+  left: -7px;
+  font-weight: 900;
+  top: 35%;
+  transform: translateY(-50%);
+}
+
+.bold {
+  font-weight: 800;
+}
+
+.med {
+  font-weight: 600;
+}
+
+.lit {
+  font-weight: 300;
+}
+
+
+.article-image {
+  width: 100%;
+  height: 300px;
+  border-radius: 10px;
+  background-color: #f1f1f1;
+  overflow: hidden;
+}
+
+.article-image img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.icon-box {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  border: 1px solid rgb(71 178 152 / 22%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0px auto;
+}
+
+.inner-head {
+  padding-top: 100px;
+}
+
+@media (min-width: 992px) {
+  .inner-head {
+    padding-top: 120px;
+  }
+}
+
+.blog-image {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+  height: 300px;
+}
+
+.blog-image img {
+  object-fit: cover;
+  height: 300px;
+  width: 100%;
+}
+
+@media (min-width: 992px) {
+  .blog-image {
+    height: 600px;
+  }
+
+  .blog-image img {
+    height: 600px;
+  }
+
+}
+
+.post-navigation {
+  display: none !important;
+}
+
+.box-contact {
+  width: 100%;
+  height: 236px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.box-contact img {
+  width: 100%;
+  height: 236px;
+  object-fit: cover;
+}
+
+.form-control {
+  border: 2px solid #e1e1e1;
+  height: 50px;
+}
+
+.form-label {
+  color: #333 !important;
+  opacity: 1 !important;
+  font-weight: 500;
+}
+
+.intl-tel-input .selected-flag {
+  padding: 10px 15px !important;
+  background-color: #f1f1f1 !important;
+}
+
+.intl-tel-input.allow-dropdown .selected-flag,
+.intl-tel-input.separate-dial-code .selected-flag {
+  width: 56px !important;
+}
+
+.intl-tel-input.allow-dropdown input,
+.intl-tel-input.allow-dropdown input[type=tel],
+.intl-tel-input.allow-dropdown input[type=text],
+.intl-tel-input.separate-dial-code input,
+.intl-tel-input.separate-dial-code input[type=tel],
+.intl-tel-input.separate-dial-code input[type=text] {
+  padding-left: 67px !important;
+}
+
+.h-150 {
+  height: 180px !important;
+}
+
+.entry-header {
+  display: none !important;
+}
+
+.wpcf7 form.invalid .wpcf7-response-output,
+.wpcf7 form.unaccepted .wpcf7-response-output,
+.wpcf7 form.payment-required .wpcf7-response-output {
+  border-color: #ffb900;
+  background: #f1c645;
+  padding: 10px 10px;
+  border-radius: 8px;
+  text-align: center;
+  color: #333 !important;
+  margin: 0px!important;
+}
+
+.wpcf7-not-valid-tip{
+  padding-top: 10px!important;
+}
+.min-h-600{
+  min-height: 600px;
+}
+
+.fs-5{
+  font-size: 18px!important;
+}

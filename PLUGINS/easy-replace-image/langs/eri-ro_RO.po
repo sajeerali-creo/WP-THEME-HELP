@@ -1,0 +1,213 @@
+# Copyright (C) 2017-2024 Iulia Cazan
+# This file is distributed under the GPL2.
+msgid ""
+msgstr ""
+"Project-Id-Version: Easy Replace Image 3.3.4\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/eri\n"
+"POT-Creation-Date: 2024-03-19T16:55:24+00:00\n"
+"PO-Revision-Date: 2024-03-19 18:59+0200\n"
+"Last-Translator: Iulia Cazan\n"
+"Language-Team: \n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.4.2\n"
+"X-Domain: eri\n"
+
+#. Plugin Name of the plugin
+#: easy-replace-image.php:136 easy-replace-image.php:162
+#: easy-replace-image.php:280 easy-replace-image.php:281
+#: easy-replace-image.php:365 easy-replace-image.php:454
+#: easy-replace-image.php:898 easy-replace-image.php:1180
+msgid "Easy Replace Image"
+msgstr "Înlocuire ușoară imagine"
+
+#. Plugin URI of the plugin
+msgid "https://iuliacazan.ro/easy-replace-image/"
+msgstr ""
+
+#. Description of the plugin
+#: easy-replace-image.php:369
+msgid ""
+"This plugin allows you to replace an attachment file by uploading another "
+"image or by downloading one from a specified URL, without deleting the "
+"attachment. The plugin handles the image sizes generation and the attachment "
+"metadata update, and you will see the result right away."
+msgstr ""
+"Acest modul vă permite să înlocuiți fișierul unui atașament prin încărcarea "
+"unei alte imagini sau prin decărcarea uneia de la un URL specificat, fără a "
+"șterge atașamentul. Modulul rezolvă și generarea mărimilor de imagine și "
+"actualizează metadata atașamentului, și veți putea vedea rezultatul imediat."
+
+#. Author of the plugin
+msgid "Iulia Cazan"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://profiles.wordpress.org/iulia-cazan"
+msgstr ""
+
+#: easy-replace-image.php:251
+msgid "You must specify an image URL."
+msgstr "Trebuie să specificați un URL."
+
+#: easy-replace-image.php:252
+msgid "The image could not be fetched."
+msgstr "Imaginea nu s-a putut descărca."
+
+#: easy-replace-image.php:253
+msgid "You must select an image file."
+msgstr "Trebuie să selectați un fișier de tip imagine."
+
+#: easy-replace-image.php:254
+msgid "The image could not be uploaded."
+msgstr "Imaginea nu s-a putut încărca."
+
+#: easy-replace-image.php:255
+msgid "Select a file."
+msgstr "Selectați un fișier."
+
+#: easy-replace-image.php:374
+msgid "Attachment Search"
+msgstr "Căutare atașament"
+
+#: easy-replace-image.php:380
+msgid "Search"
+msgstr "Caută"
+
+#: easy-replace-image.php:382
+msgid ""
+"Search here for a specific image that you want to replace. The search will "
+"match the attachment ID, title, guid or image metadata."
+msgstr ""
+"Căutați aici imaginea specifică pe care doriți să o înlocuiți. Căutarea se "
+"potrivește pentru ID-ul atașamentului, titlul, URL fișier sau metadatele "
+"imaginii."
+
+#: easy-replace-image.php:384
+msgid "Search results"
+msgstr "Rezultatele căutării"
+
+#. Translators: %1$d - number of items shown, %2$d - total items.
+#: easy-replace-image.php:415
+msgid "Showing %1$d items out of %2$d"
+msgstr "Se afișează %1$d elemente din %2$d"
+
+#: easy-replace-image.php:419
+msgid "Click the item from the list below to select it for replacement."
+msgstr ""
+"Apăsați elementul din lista de mai jos pentru a-l selecta pentru înlocuire."
+
+#: easy-replace-image.php:428
+msgid "Click to select the image"
+msgstr "Apăsați pentru a selecta imaginea"
+
+#: easy-replace-image.php:442
+msgid "No image found."
+msgstr "Nu s-a găsit nicio imagine."
+
+#: easy-replace-image.php:445
+msgid "No search key applied."
+msgstr "Nu s-a aplicat nicio cheie de căutare."
+
+#: easy-replace-image.php:456 easy-replace-image.php:472
+msgid "No attachment selected."
+msgstr "Nu s-a selectat niciun atașament."
+
+#: easy-replace-image.php:467
+msgid "Selected Image"
+msgstr "Imagine selectată"
+
+#: easy-replace-image.php:482
+msgid "Click to go to the attachment page"
+msgstr "Apăsați pentru a merge la pagina atașamentului"
+
+#: easy-replace-image.php:482
+msgid "ID"
+msgstr "ID"
+
+#: easy-replace-image.php:910 easy-replace-image.php:964
+msgid "Upload"
+msgstr "Încarcă"
+
+#: easy-replace-image.php:917
+msgid "Get from URL"
+msgstr "Descarcă de la URL"
+
+#: easy-replace-image.php:925
+msgid "Replace* the attachment file with the image from the specified URL"
+msgstr "Înlocuiește* fișierul atașamentului cu imaginea de la URL-ul specificat"
+
+#: easy-replace-image.php:930
+msgid "Image URL"
+msgstr "URL imagine"
+
+#: easy-replace-image.php:939
+msgid "Download"
+msgstr "Descarcă"
+
+#: easy-replace-image.php:942
+msgid ""
+"* If the image you specify can be downloaded to your site uploads folder, it "
+"will replace the current file."
+msgstr ""
+"* Dacă imaginea pe care o specificați se poate descărca în directorul uploads "
+"al sitului dumneavoastră, aceasta va înlocui fișierul curent."
+
+#: easy-replace-image.php:949
+msgid "Replace* the attachment file with the image you upload"
+msgstr "Înlocuiește* fișierul atașamentului cu imaginea pe care o încarci"
+
+#: easy-replace-image.php:967
+msgid ""
+"* If the image you specify can be uploaded to your site uploads folder, it "
+"will replace the current file."
+msgstr ""
+"* Dacă imaginea se poate încărca în directorul uploads al sitului "
+"dumneavoastră, aceasta va înlocui fișierul curent."
+
+#: easy-replace-image.php:975
+msgid "Easy replace any image"
+msgstr "Înlocuire ușoară oricare imagine"
+
+#: easy-replace-image.php:1124
+msgid "Settings"
+msgstr "Setări"
+
+#: easy-replace-image.php:1125
+msgid "Plugin URL"
+msgstr "URL modul"
+
+#: easy-replace-image.php:1137
+msgid "A huge thanks in advance!"
+msgstr "Multe mulțumiri în avans!"
+
+#. Translators: %1$s - donate URL, %2$s - rating, %3$s - thanks.
+#: easy-replace-image.php:1141
+msgid ""
+"If you find the plugin useful and would like to support my work, please "
+"consider making a <a href=\"%1$s\" target=\"_blank\">donation</a>. <br>It "
+"would make me very happy if you would leave a %2$s rating. %3$s"
+msgstr ""
+"Dacă acest modul îți este folositor și ai dori să îmi sprijini munca, m-aș "
+"bucura dacă ai face o <a href=\"%1$s\" target=\"_blank\">donație</a>. <br>M-ar "
+"bucura mult dacă ai lăsa o recenzie de %2$s. %3$s"
+
+#. Translators: %1$s - plugins URL, %2$s - heart icon, %3$s - extensions URL, %4$s - star icon, %5$s - maybe PRO details.
+#: easy-replace-image.php:1185
+msgid ""
+"%5$sCheck out my other <a href=\"%1$s\" target=\"_blank\" "
+"rel=\"noreferrer\">%2$s free plugins</a> on WordPress.org and the <a "
+"href=\"%3$s\" target=\"_blank\" rel=\"noreferrer\">%4$s other extensions</a> "
+"available!"
+msgstr ""
+"%5$sVezi și celelalte <a href=\"%1$s\" target=\"_blank\" "
+"rel=\"noreferrer\">%2$s module gratuite</a> ale mele pe WordPress.org și <a "
+"href=\"%3$s\" target=\"_blank\" rel=\"noreferrer\">%4$s extensiile premium</a> "
+"disponibile!"
+
+#. Translators: %1$s - plugin name.
+#: easy-replace-image.php:1203
+msgid "%1$s plugin was activated!"
+msgstr "Modulul %1$s a fost activat!"

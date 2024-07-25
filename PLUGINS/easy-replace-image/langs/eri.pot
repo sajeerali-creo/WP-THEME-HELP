@@ -1,0 +1,182 @@
+# Copyright (C) 2017-2024 Iulia Cazan
+# This file is distributed under the GPL2.
+msgid ""
+msgstr ""
+"Project-Id-Version: Easy Replace Image 3.3.4\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/eri\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2024-03-19T16:55:24+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.9.0\n"
+"X-Domain: eri\n"
+
+#. Plugin Name of the plugin
+#: easy-replace-image.php:136
+#: easy-replace-image.php:162
+#: easy-replace-image.php:280
+#: easy-replace-image.php:281
+#: easy-replace-image.php:365
+#: easy-replace-image.php:454
+#: easy-replace-image.php:898
+#: easy-replace-image.php:1180
+msgid "Easy Replace Image"
+msgstr ""
+
+#. Plugin URI of the plugin
+msgid "https://iuliacazan.ro/easy-replace-image/"
+msgstr ""
+
+#. Description of the plugin
+#: easy-replace-image.php:369
+msgid "This plugin allows you to replace an attachment file by uploading another image or by downloading one from a specified URL, without deleting the attachment. The plugin handles the image sizes generation and the attachment metadata update, and you will see the result right away."
+msgstr ""
+
+#. Author of the plugin
+msgid "Iulia Cazan"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://profiles.wordpress.org/iulia-cazan"
+msgstr ""
+
+#: easy-replace-image.php:251
+msgid "You must specify an image URL."
+msgstr ""
+
+#: easy-replace-image.php:252
+msgid "The image could not be fetched."
+msgstr ""
+
+#: easy-replace-image.php:253
+msgid "You must select an image file."
+msgstr ""
+
+#: easy-replace-image.php:254
+msgid "The image could not be uploaded."
+msgstr ""
+
+#: easy-replace-image.php:255
+msgid "Select a file."
+msgstr ""
+
+#: easy-replace-image.php:374
+msgid "Attachment Search"
+msgstr ""
+
+#: easy-replace-image.php:380
+msgid "Search"
+msgstr ""
+
+#: easy-replace-image.php:382
+msgid "Search here for a specific image that you want to replace. The search will match the attachment ID, title, guid or image metadata."
+msgstr ""
+
+#: easy-replace-image.php:384
+msgid "Search results"
+msgstr ""
+
+#. Translators: %1$d - number of items shown, %2$d - total items.
+#: easy-replace-image.php:415
+msgid "Showing %1$d items out of %2$d"
+msgstr ""
+
+#: easy-replace-image.php:419
+msgid "Click the item from the list below to select it for replacement."
+msgstr ""
+
+#: easy-replace-image.php:428
+msgid "Click to select the image"
+msgstr ""
+
+#: easy-replace-image.php:442
+msgid "No image found."
+msgstr ""
+
+#: easy-replace-image.php:445
+msgid "No search key applied."
+msgstr ""
+
+#: easy-replace-image.php:456
+#: easy-replace-image.php:472
+msgid "No attachment selected."
+msgstr ""
+
+#: easy-replace-image.php:467
+msgid "Selected Image"
+msgstr ""
+
+#: easy-replace-image.php:482
+msgid "Click to go to the attachment page"
+msgstr ""
+
+#: easy-replace-image.php:482
+msgid "ID"
+msgstr ""
+
+#: easy-replace-image.php:910
+#: easy-replace-image.php:964
+msgid "Upload"
+msgstr ""
+
+#: easy-replace-image.php:917
+msgid "Get from URL"
+msgstr ""
+
+#: easy-replace-image.php:925
+msgid "Replace* the attachment file with the image from the specified URL"
+msgstr ""
+
+#: easy-replace-image.php:930
+msgid "Image URL"
+msgstr ""
+
+#: easy-replace-image.php:939
+msgid "Download"
+msgstr ""
+
+#: easy-replace-image.php:942
+msgid "* If the image you specify can be downloaded to your site uploads folder, it will replace the current file."
+msgstr ""
+
+#: easy-replace-image.php:949
+msgid "Replace* the attachment file with the image you upload"
+msgstr ""
+
+#: easy-replace-image.php:967
+msgid "* If the image you specify can be uploaded to your site uploads folder, it will replace the current file."
+msgstr ""
+
+#: easy-replace-image.php:975
+msgid "Easy replace any image"
+msgstr ""
+
+#: easy-replace-image.php:1124
+msgid "Settings"
+msgstr ""
+
+#: easy-replace-image.php:1125
+msgid "Plugin URL"
+msgstr ""
+
+#: easy-replace-image.php:1137
+msgid "A huge thanks in advance!"
+msgstr ""
+
+#. Translators: %1$s - donate URL, %2$s - rating, %3$s - thanks.
+#: easy-replace-image.php:1141
+msgid "If you find the plugin useful and would like to support my work, please consider making a <a href=\"%1$s\" target=\"_blank\">donation</a>. <br>It would make me very happy if you would leave a %2$s rating. %3$s"
+msgstr ""
+
+#. Translators: %1$s - plugins URL, %2$s - heart icon, %3$s - extensions URL, %4$s - star icon, %5$s - maybe PRO details.
+#: easy-replace-image.php:1185
+msgid "%5$sCheck out my other <a href=\"%1$s\" target=\"_blank\" rel=\"noreferrer\">%2$s free plugins</a> on WordPress.org and the <a href=\"%3$s\" target=\"_blank\" rel=\"noreferrer\">%4$s other extensions</a> available!"
+msgstr ""
+
+#. Translators: %1$s - plugin name.
+#: easy-replace-image.php:1203
+msgid "%1$s plugin was activated!"
+msgstr ""
